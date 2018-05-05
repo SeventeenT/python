@@ -78,8 +78,9 @@ list2 = [1, 2, 3]
 list3 = [4, 5, 6]
 # 虽然tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
 tuple1 = (1, list2, list3)
-tuple2 = (0,)  # 一个元素，需要在元素后添加逗号
+tuple2 = (0,)  # 一个元素，需要在元素后添加逗号,否则括号会被当作运算符使用
 print(tuple1 + tuple2)
+print("查看类型：", type(tuple2))
 
 print("~" * 30)
 
