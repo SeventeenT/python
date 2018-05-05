@@ -17,8 +17,34 @@ print("\n", "=" * 30)
 
 b = [1, 2, 3, 4]
 it_b = iter(b)
-while True:
+i = 0
+while i < len(b):
     try:
         print(next(it_b))
+        i += 1
     except StopIteration:
-        sys.exit()
+        break
+#         sys.exit(0)  # 执行该句程序会直接退出，后面的程序将不再执行
+
+print("=" * 30)
+
+
+# 生成器
+
+def fibonacci(n):  # 生成器函数
+    k, l, counter = 0, 1, 0
+    while True:
+        if counter > n:
+            return
+        yield k
+        k, l = l, k + l
+        counter += 1
+
+
+f = fibonacci(10)  # f 是一个迭代器，由生成器返回生成
+
+while True:
+    try:
+        print(next(f), end=" ")
+    except StopIteration:
+        break
