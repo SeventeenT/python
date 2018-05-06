@@ -107,3 +107,18 @@ def outer():
 
 
 outer()
+
+list_a = [0, 1, 2, 3]
+list_a.reverse()  # 倒叙列表
+print("倒叙", list_a)
+
+vec = [2, 4, 6]
+vec_3 = [3 * x for x in vec]
+print("列表推导式", vec_3)
+vec_4 = [[x, x * 2] for x in vec]
+print(vec_4)
+
+freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']
+# strip()移除字符串头尾指定的字符（默认为空格）。
+freshfruit_1 = [weapon.strip() for weapon in freshfruit]
+print(freshfruit_1)
